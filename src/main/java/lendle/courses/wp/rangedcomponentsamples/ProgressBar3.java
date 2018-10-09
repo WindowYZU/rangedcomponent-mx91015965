@@ -29,7 +29,7 @@ public class ProgressBar3 {
         frame.setDefaultCloseOperation(WindowConstants.DISPOSE_ON_CLOSE);
         frame.setLayout(new FlowLayout());
         //建立 ProgressMonitor
-        ProgressMonitor progressBar=null;
+        ProgressMonitor progressBar=new ProgressMonitor(frame, "修練愛情的辛酸", "我們這些", 0, 100);
         /////////////////////////
         Thread t=new Thread(){
             public void run(){
@@ -44,6 +44,7 @@ public class ProgressBar3 {
                 }
             }
         };
+        t.setDaemon(true);
         t.start();
         
         frame.setVisible(true);

@@ -29,7 +29,11 @@ public class ProgressBar1 {
         //試試看
         //minimum, maximum, value, stringPainted, indeterminate
         //這幾個屬性
-        
+        progressBar.setMaximum(100);
+        progressBar.setMinimum(0);
+        progressBar.setValue(69);
+        progressBar.setStringPainted(true);
+        progressBar.setIndeterminate(false);
         
         ////////////////////////////////////////////////////////
         frame.add(progressBar);

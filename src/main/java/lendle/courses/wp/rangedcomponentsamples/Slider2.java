@@ -41,11 +41,16 @@ public class Slider2 {
         frame.add(slider);
         
         JTextField textField=new JTextField();
-        textField.setColumns(20);
+        textField.setColumns(10);
         frame.add(textField);
         //攔截 ChangeListener
         //並將 slider.getValue() 填入 textField
-        
+        slider.addChangeListener(new ChangeListener() {
+            @Override
+            public void stateChanged(ChangeEvent e) {
+                textField.setText(""+slider.getValue());
+            }
+        });
         
         ///////////////////////////////////////
         
